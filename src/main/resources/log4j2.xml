@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="LOG_LOCATION">logs</Property>
+        <Property name="LOG_NAME">camera-holder</Property>
+        <Property name="LOG_PATTERN">[%-5level]-%d{HH:mm:ss.SSS}-%class{36} %L %M - %msg%xEx%n</Property>
+    </Properties>
+    <Appenders>
+
+        <console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+        </console>
+        <!--<File name="File_LOG" fileName="${LOG_NAME}/test.log" append="false">-->
+        <!--<PatternLayout pattern="${LOG_PATTERN}"/>-->
+        <!--</File>-->
+        <RollingFile name="RollingFileInfo" fileName="${LOG_LOCATION}/info/info.log" filePattern="${LOG_LOCATION}/info/${LOG_NAME}-INFO-%d{yyyy-MM-dd}_%i.log.gz">
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+
+        <RollingFile name="RollingFileWarn" fileName="${LOG_LOCATION}/warn/warn.log" filePattern="${LOG_LOCATION}/warn/${LOG_NAME}-WARN-%d{yyyy-MM-dd}_%i.log.gz">
+            <ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+
+        <RollingFile name="RollingFileError" fileName="${LOG_LOCATION}/error/error.log" filePattern="${LOG_LOCATION}/error/${LOG_NAME}-ERROR-%d{yyyy-MM-dd}_%i.log.gz">
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+
+    </Appenders>
+    <loggers>
+        <logger name="com.bearhunting" level="INFO" />
+        <logger name="org.springframework" level="INFO"/>
+        <root level="all">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="RollingFileInfo"/>
+            <appender-ref ref="RollingFileWarn"/>
+            <appender-ref ref="RollingFileError"/>
+        </root>
+    </loggers>
+
+</Configuration>

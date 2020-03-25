@@ -1,0 +1,49 @@
+spring:
+  profiles:
+    active: dev
+  http:
+    converters:
+      preferred-json-mapper: jackson
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+  mvc:
+    date-format: yyyy-MM-dd
+    servlet:
+      load-on-startup: 1
+    async:
+      request-timeout: 90s
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+#    database-platform: org.hibernate.spatial.dialect.postgis.PostgisPG95Dialect
+    database-platform: com.bearhunting.cameraholder.component.PgDialect
+    properties:
+      hibernate:
+        #        globally_quoted_identifiers: true
+        enable_lazy_load_no_trans: true
+    hibernate:
+      use-new-id-generator-mappings: true
+    open-in-view: false
+server:
+  compression:
+    enabled: true
+    mime-types: text/html,text/css,application/json
+    min-response-size: 2048
+  undertow:
+    log:
+      dir: logs
+      enabled: true
+    io-threads: 3
+    worker-threads: 12
+  connection-timeout: 300s
+  servlet:
+    application-display-name: gd-security-platform
+    context-path: /api
+  http2:
+    enabled: true

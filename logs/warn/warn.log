@@ -1,0 +1,1 @@
+[WARN ]-13:30:22.287-io.undertow.websockets.jsr.Bootstrap 68 handleDeployment - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used

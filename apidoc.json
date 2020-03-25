@@ -1,0 +1,19 @@
+{
+  "name": "掌控平台-server接口文档",
+  "version": "1.0.0",
+  "title": "掌控平台-server接口文档",
+  "url": "http://192.168.63.29:10086/api",
+  "sampleUrl": "http://192.168.63.29:10086/api",
+  "template": {
+    "forceLanguage": "zh-cn"
+  },
+  "template": {
+    "withCompare": true,
+    "withGenerator": true
+  },
+  "template": {
+    "jQueryAjaxSetup": {
+      "contentType": "application/json"
+    }
+  }
+}

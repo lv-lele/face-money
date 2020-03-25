@@ -1,0 +1,16 @@
+server:
+  port: 10086
+logging:
+  config: classpath:log4j2.xml
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.25.101:5432/zhou_jia_du?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: sby
+    password: sby
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: update

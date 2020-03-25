@@ -1,0 +1,33 @@
+[INFO ]-13:30:19.882-org.springframework.boot.StartupInfoLogger 50 logStarting - Starting CameraHolderApplication on DESKTOP-2DP20LM with PID 15996 (E:\DevInstall\GitRepository\camera-holder\target\classes started by lele in E:\DevInstall\GitRepository\camera-holder)
+[INFO ]-13:30:19.908-org.springframework.boot.SpringApplication 679 logStartupProfileInfo - The following profiles are active: dev
+[INFO ]-13:30:19.963-org.springframework.boot.logging.DeferredLog 227 logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ]-13:30:19.963-org.springframework.boot.logging.DeferredLog 227 logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ]-13:30:21.250-org.springframework.data.repository.config.RepositoryConfigurationDelegate 126 registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ]-13:30:21.369-org.springframework.data.repository.config.RepositoryConfigurationDelegate 182 registerRepositoriesIn - Finished Spring Data repository scanning in 110ms. Found 3 repository interfaces.
+[INFO ]-13:30:21.890-org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330 postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8824ccc0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[WARN ]-13:30:22.287-io.undertow.websockets.jsr.Bootstrap 68 handleDeployment - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+[INFO ]-13:30:22.337-io.undertow.servlet.spec.ServletContextImpl 364 log - Initializing Spring embedded WebApplicationContext
+[INFO ]-13:30:22.338-org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 296 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2374 ms
+[INFO ]-13:30:23.148-org.hibernate.Version 46 logVersion - HHH000412: Hibernate Core {5.3.7.Final}
+[INFO ]-13:30:23.150-org.hibernate.cfg.Environment 213 <clinit> - HHH000206: hibernate.properties not found
+[INFO ]-13:30:23.294-org.hibernate.spatial.integration.SpatialService 42 <init> - HHH80000001: hibernate-spatial integration enabled : true
+[INFO ]-13:30:23.354-org.hibernate.annotations.common.reflection.java.JavaReflectionManager 49 <clinit> - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[INFO ]-13:30:23.567-com.zaxxer.hikari.HikariDataSource 110 getConnection - HikariPool-1 - Starting...
+[INFO ]-13:30:24.117-com.zaxxer.hikari.HikariDataSource 123 getConnection - HikariPool-1 - Start completed.
+[INFO ]-13:30:24.139-org.hibernate.dialect.Dialect 157 <init> - HHH000400: Using dialect: com.bearhunting.cameraholder.component.PgDialect
+[INFO ]-13:30:43.272-org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl 124 useContextualLobCreation - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[INFO ]-13:30:43.289-org.hibernate.type.BasicTypeRegistry 159 register - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@485dad21
+[INFO ]-13:30:44.951-org.springframework.orm.jpa.AbstractEntityManagerFactoryBean 415 buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ]-13:30:45.002-org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer 57 startServer - LiveReload server is running on port 35729
+[INFO ]-13:30:46.187-org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver 59 <init> - Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO ]-13:30:46.286-io.undertow.servlet.spec.ServletContextImpl 364 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ]-13:30:46.287-org.springframework.web.servlet.FrameworkServlet 524 initServletBean - Initializing Servlet 'dispatcherServlet'
+[INFO ]-13:30:46.297-org.springframework.web.servlet.FrameworkServlet 546 initServletBean - Completed initialization in 10 ms
+[INFO ]-13:30:46.322-org.xnio.Xnio 104 <clinit> - XNIO version 3.3.8.Final
+[INFO ]-13:30:46.336-org.xnio.nio.NioXnio 55 <clinit> - XNIO NIO Implementation Version 3.3.8.Final
+[INFO ]-13:30:46.408-org.springframework.boot.web.embedded.undertow.UndertowServletWebServer 148 start - Undertow started on port(s) 10086 (http) with context path '/api'
+[INFO ]-13:30:46.411-org.springframework.boot.StartupInfoLogger 59 logStarted - Started CameraHolderApplication in 27.05 seconds (JVM running for 28.696)
+[INFO ]-13:33:14.308-org.springframework.orm.jpa.AbstractEntityManagerFactoryBean 597 destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ]-13:33:14.313-com.zaxxer.hikari.HikariDataSource 350 close - HikariPool-1 - Shutdown initiated...
+[INFO ]-13:33:14.318-com.zaxxer.hikari.HikariDataSource 352 close - HikariPool-1 - Shutdown completed.
+[INFO ]-13:33:14.322-io.undertow.servlet.spec.ServletContextImpl 364 log - Destroying Spring FrameworkServlet 'dispatcherServlet'
